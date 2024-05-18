@@ -5,7 +5,7 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css";
 import MapContext from "../../Context/MapContext";
 
-const MAPBOX_TOKEN = process.env.REACT_APP_CONNECTION_MAPBOX;
+const MAPBOX_TOKEN = 'pk.eyJ1Ijoidml2ZWstMTIzNCIsImEiOiJjbHc5Z3IzemowM2J4MmtvM2JpYmloMGlmIn0.172UJe0E11Ul7N3VzpACeg';
 
 const GoogleMap = () => {
     const mapRef = useRef(null);

@@ -4,9 +4,10 @@
   "description": "Learning to make Pizza Delivery APP",
   "main": "index.js",
   "scripts": {
-    "install":"cd client && npm install",
-    "client":"cd client && npm start",
-    "start": "concurrently \"npm run client\" \"nodemon ./server/index.js\" \"nodemon ./PizzaAPI/index.js\"",
+    "build": "npm install && npm install --prefix client && npm run build --prefix client",
+    "server": "nodemon ./server/index.js",
+    "pizzaapi": "nodemon ./PizzaAPI/index.js",
+    "start": "concurrently \"cd client && npm run start\" \"npm run server\" \"npm run pizzaapi\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Vivek Shankar Phadake",
@@ -14,6 +15,7 @@
   "dependencies": {
     "concurrently": "^8.2.2",
     "dotenv": "^16.4.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "serve": "^14.2.3"
   }
 }
